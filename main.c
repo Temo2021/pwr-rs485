@@ -160,7 +160,7 @@ int main(void)
     while (1)
     {
         // LED иак╦
-        if(HAL_GetTick() - led_tick >= 500)
+        if(HAL_GetTick() - led_tick >= 300)
         {
             HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
             HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
