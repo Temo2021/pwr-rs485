@@ -160,7 +160,7 @@ int main(void)
     while (1)
     {
         // LED 闪烁
-        if(HAL_GetTick() - led_tick >= 300)
+        if(HAL_GetTick() - led_tick >= 600)
         {
             HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
             HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
@@ -201,7 +201,7 @@ void SystemClock_Config(void)
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
     RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
     RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-    // 16MHz 下 FLASH 延时设为 0
+    // 16MHz 下 FLASH 延时设为 0    23232323
     HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0);
 }
 
